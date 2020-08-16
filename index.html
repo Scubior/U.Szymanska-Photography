@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image gallery</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark indigo fixed-top nav-box1">
+        <div class="container">
+            <span class="navbar-brand">U.Szymanska Photography</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr auto">
+                    <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#landscapes">Landscapes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#humans">Humans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#things">Things</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="author-box" id="home">
+        <div class="view" id="intro">
+            <div class="full-backgroung-img">
+            </div>
+        </div>
+        <div class="author-note-box">
+            <span class="author-note">
+                Join to My jurney. See magic hidden in landscapes, love behind human eyes and undiscovered spark in our lives ~ Ula
+            </span>
+        </div>
+    </div>
+    <div class="landscapes-gallery" id="landscapes">
+        <div class="img-container">
+            <img src="./full/landscapes/landscape1.jpg" alt="Mazury's lake" data-original="landscape1.jpg"/>
+        </div>
+        <div class="img-container">
+            <img src="./full/landscapes/landscape2.jpg" alt="Warsaw streets" data-original="landscape2.jpg"/>
+        </div>
+        <div class="img-container">
+            <img src="./full/landscapes/landscape3.jpg" alt="Polish see" data-original="landscape3.jpg"/>
+        </div>
+        <div class="img-container">
+            <img src="./full/landscapes/landscape4.jpg" alt="Mountains view" data-original="landscape4.jpg"/>
+        </div>
+    </div>
+    <div class="modal-img">
+        <img src="./full/autumn-full.jpg" alt="" class="full-img">
+        <p class="full-text">test</p>
+    </div>
+    <div class="humans-gallery" id="humans">
+        <div class="humans-img-container">
+            <a src="./full/humans/humans1.jpg" alt="Human" class="human-img1" data-original="humans1.jpg"></a>
+            <a src="./full/humans/humans2.jpg" alt="Human" class="human-img2" data-original="humans2.jpg"></a>
+            <a src="./full/humans/humans3.jpg" alt="Human" class="human-img3" data-original="humans3.jpg"></a>
+            <a src="./full/humans/humans4.jpg" alt="Human" class="human-img4" data-original="humans4.jpg"></a>
+            <a src="./full/humans/humans5.jpg" alt="Human" class="human-img5" data-original="humans5.jpg"></a>
+            <a src="./full/humans/humans6.jpg" alt="Human" class="human-img6" data-original="humans6.jpg"></a>
+            <a src="./full/humans/humans7.jpg" alt="Human" class="human-img7" data-original="humans7.jpg"></a>
+            <a src="./full/humans/humans8.jpg" alt="Human" class="human-img8" data-original="humans8.jpg"></a>
+            <a src="./full/humans/humans9.jpg" alt="Human" class="human-img9" data-original="humans9.jpg"></a>
+            <a src="./full/humans/humans10.jpg" alt="Human" class="human-img10" data-original="humans10.jpg"></a>
+        </div>
+    </div>
+    <div class="things-gallery" id="things">
+        <div class="slide-images">
+            <div class="slide s1">
+                <img src="full/things/things1.jpg" alt="">
+            </div>
+            <div class="slide s2">
+                <img src="full/things/things2.jpg" alt="">
+            </div>
+            <div class="slide s4">
+                <img src="full/things/things4.jpg" alt="">
+            </div>
+            <div class="slide s5">
+                <img src="full/things/things5.jpg" alt="">
+            </div>
+            <div class="slide s6">
+                <img src="full/things/things6.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <div class="contact-box">
+            <h1 class="display-4">Contact me</h1>
+            <p class="lead">Wanna find out more about my passion?</p>
+            <hr class="my-4">
+            <div class="card">
+                <div class="card-body">
+                  <span class="text-primary">Mail</span> | u.szymanska@gmail.com.
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="card">
+                <div class="card-body">
+                  <a href ="https://www.facebook.com/pg/UlaSzymanskaphotography123/photos/" class="text-primary">Facebook</a> |
+                  <a href="https://www.instagram.com/ulczyc/?hl=pl&fbclid=IwAR1_0YvS-py1aXW-IK6oKslmTdvPDQEk7fMh-awROgVyLUPRrnYET-ZoDfg" class="text-primary">Instagram</a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <span>Copyrigths@2020 All rigths reserved</span>
+        </div>
+        <div class="contact-image">
+            <img src="./preview/author_min_footer.PNG" alt="">
+        </div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

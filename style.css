@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.nav-box1{
+    width: 100%;
+    height: 80px;
+    background-color: #0009;
+    box-shadow: 0 8px 6px -6px black;
+}
+#navbarSupportedContent{
+    background-color: #0009;
+}
+.author-box{
+    height: 100vh;
+}
+.view{
+    height: 100vh;
+    background: url("./full/author.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+.author-note-box{
+    width: 30%;
+    padding: 50px;
+    top: -35%;
+    left: 15%;
+    position: relative;
+    background-color: #0009;
+}
+.author-note{
+    text-align: center; 
+    color: white;
+}
+.landscapes-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    min-height: 100vh;
+}
+.img-container{
+    overflow: hidden;
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+.img-container img:hover{
+    transform: scale(1.2);
+}
+.modal-img{
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease-out;
+}
+.modal-img.open{
+    opacity: 1;
+    pointer-events: all;
+}
+.full-img{
+    position: absolute;
+    height: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(0.5);
+    transition: all 0.25s ease-out;
+}
+.full-img.open{
+    transform: translate(-50%,-50%) scale(1);
+}
+.modal-img p{
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%,-5%);
+}
+.humans-gallery{
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 1.5rem 1.5rem;
+    
+}
+.humans-img-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1 fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    grid-template-areas: 'human-img1 human-img2 human-img2 human-img3'
+                         'human-img1 human-img4 human-img5 human-img3'
+                         'human-img6 human-img4 human-img7 human-img8'
+                         'human-img6 human-img9 human-img10 human-img10';
+}
+.humans-img-container a{
+    width: 100%;
+    height: 25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.humans-img-container a::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6) ;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.humans-img-container a:hover::before{
+    opacity: 1;
+}
+.human-img1{
+    grid-area: human-img1;
+    background-image: url("./full/humans/humans1.jpg");
+    min-height: 51.5rem;
+}
+.human-img2{
+    grid-area: human-img2;
+    background-image: url("./full/humans/humans2.jpg");
+}
+.human-img3{
+    grid-area: human-img3;
+    background-image: url("./full/humans/humans3.jpg");
+    min-height: 51.5rem;
+}
+.human-img4{
+    grid-area: human-img4;
+    background-image: url("./full/humans/humans4.jpg");
+    min-height: 51.5rem;
+}
+.human-img5{
+    grid-area: human-img5;
+    background-image: url("./full/humans/humans5.jpg");
+}
+.human-img6{
+    grid-area: human-img6;
+    background-image: url("./full/humans/humans6.jpg");
+    min-height: 51.5rem;
+}
+.human-img7{
+    grid-area: human-img7;
+    background-image: url("./full/humans/humans7.jpg");
+}
+.human-img8{
+    grid-area: human-img8;
+    background-image: url("./full/humans/humans8.jpg");
+}
+.human-img9{
+    grid-area: human-img9;
+    background-image: url("./full/humans/humans9.jpg");
+}
+.human-img10{
+    grid-area: human-img10;
+    background-image: url("./full/humans/humans10.jpg");
+}
+.things-gallery{
+    overflow: hidden;
+    height: 100vh;
+    width: 1200px;
+    margin-left: 350px;
+}
+@-webkit-keyframes slide_animation{
+    0%{left:0px;}
+    10%{left:1200px;}
+    20%{left:2400px;}
+    30%{left:3600px;}
+    40%{left:4800px;}
+    50%{left:4800px;}
+    60%{left:3600px;}
+    70%{left:2400px;}
+    80%{left:1200px;}
+    90%{left:0px;}
+    100%{left:0px;}
+}
+.slide-images{
+    height: 800px;
+    width: 6000px;
+    margin: 0 0 0 -4800px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+.slide{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+}
+.contact{
+    width: 80%;
+    height: 100vh;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+}
+.contact-box{
+    width: 40%;
+    margin: auto;
+}
+.contact-image{
+    width: 50%;
+    display: flex;
+}
+.contact-image img{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #c3c3c3;
+    border-radius: 150px;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+}
+@media screen and (max-width: 900px){
+    .humans-img-container{
+        grid-template-areas: 'human-img1 human-img1 human-img2 human-img2'
+                             'human-img1 human-img1 human-img3 human-img4'
+                             'human-img5 human-img5 human-img6 human-img7'
+                             'human-img8 human-img9 human-img10 human-img10';
+    }
+    .humans-img-container a{
+        height: 20rem;
+    }
+    .human-img1{
+        min-height: 41.5rem;
+    }
+    .human-img3,
+    .human-img4,
+    .human-img6{
+        min-height: 20rem;
+    }
+}
+@media screen and (max-width: 600px){
+    .humans-img-container{
+        grid-template-areas: 'human-img1 human-img1 human-img1 human-img1'
+                             'human-img2 human-img2 human-img2 human-img2'
+                             'human-img3 human-img3 human-img3 human-img3'
+                             'human-img4 human-img4 human-img4 human-img4'
+                             'human-img5 human-img5 human-img5 human-img5'
+                             'human-img6 human-img6 human-img6 human-img6'
+                             'human-img7 human-img7 human-img7 human-img7'
+                             'human-img8 human-img8 human-img8 human-img8'
+                             'human-img9 human-img9 human-img9 human-img9'
+                             'human-img10 human-img10 human-img10 human-img10';
+    }
+    .humans-img-container a,
+    .human-img1,
+    .human-img3,
+    .human-img4,
+    .human-img6{
+        min-height: 30rem;
+        height: 30rem;
+    }
+    .author-note-box{
+        width: 50%;
+        padding: 15px;
+    }
+    .contact{
+        width:100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    .contact-box,
+    .contact-image{
+        width:80%;
+    }
+    .things-gallery{
+        width: 100vw;
+        margin-left: 0px;
+    }
+}
